@@ -8,4 +8,6 @@ Amazing shit!
 
 Maybe some image?
 
+Now?
+
 ![](/images/404.jpg)
