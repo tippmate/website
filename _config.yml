@@ -23,6 +23,8 @@ url: http://www.tippmate.de
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+timezone: Berlin
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
