@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    {% include meta.html %}
-
+    {% include   meta.html %}
+    
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body>
+    <div class="header">
+      <div class="page-container">
+        <a href="{{ site.t[page.lang].routes.main.home.url }}" class="header-logo">
+          Tippmate
+        </a>
+        <div class="nav">
+          {% assign routes = site.t[page.lang].routes.main %}
+          {% for route in routes %}
+            <a class="nav__item" href="{{ route[1].url }}">
+              {{ route[1].name }}
+            </a>
+          {% endfor %}
+        </div>
+        <div class="mobile-nav-toggle">
+          <button class="mobile-nav-toggle__show">
+            <span></span><span></span><span></span>
+          </button>
+          <button class="mobile-nav-toggle__hide">
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mobile-nav" style="display: none">
+      <div class="mobile-nav__container">
+        {% assign routes = site.t[page.lang].routes.main %}
+        {% for route in routes %}
+          <a class="mobile-nav__item" href="{{ route[1].url }}">
+            {{ route[1].name }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
@@ -41,7 +78,14 @@
         </footer>
       </div>
     </div>
-
+    
+    <script type="text/javascript" src="{{ site.baseurl }}/javascript/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/javascript/main.js"></script>
+    
+    <script type="text/javascript">
+      page = new Tippmate.page();
+    </script>
+    
     {% include analytics.html %}
   </body>
 </html>

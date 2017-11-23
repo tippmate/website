@@ -44,3 +44,20 @@ timezone: Berlin
 # # Set the Sass partials directory, as we're using @imports
 # sass:
 #   style: :expanded # You might prefer to minify using :compressed
+
+t:
+  de:
+    routes:
+      main:
+        home:
+          name: Home
+          url: /
+        product:
+          name: Produkt
+          url: /produkt
+        references:
+          name: Referenzen
+          url: /referenzen
+        contact:
+          name: Kontakt
+          url: /contact
