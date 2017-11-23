@@ -1,6 +1,7 @@
 ---
 layout: post
 title: You're up and running!
+lang: de
 date: 2014-03-03 00:00:00 +0000
 ---
 

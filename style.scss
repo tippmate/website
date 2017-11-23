@@ -136,8 +136,18 @@ img {
   left: 0;
   right: 0;
   z-index: 100;
-  background: gray;
+  background: #FFF;
   height: $header--height;
+}
+
+.header-logo {
+  display: block;
+  margin: 0 auto;
+  @include hide-text;
+  background: url(/images/tippmate-logo-black.svg) no-repeat; 
+  background-size: contain;
+  height: 52px;
+  width: 74px;
 }
 
 .nav {
