@@ -9,6 +9,17 @@ fields:
   description: Post Title
   config:
     required: true
+  default: test
 - type: datetime
   name: date
   label: Date
+  default: Invalid date
+- type: select
+  name: layout
+  config:
+    source:
+      type: simple
+    options:
+    - post
+  label: Layout
+  hidden: false
