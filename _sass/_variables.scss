@@ -3,26 +3,38 @@
 // VARIABLES
 //
 
-// Colors
+
+// COLORS
+
 $blue: #4183C4;
 $green: #96C243;
 
 // Grays
-$black:           #000;
-$gray:            #858585;
-$gray--dark:      #333;
-$gray--light:     #E6E6E6;
+$black:             #000;
+$gray:              #858585;
+$gray--dark:        #333;
+$gray--light:       #E6E6E6;
+$gray--lighter:     #EEE;
 
-$text:            $gray--dark;
-$text--dark:      $black;
-$text--highlight: $green;
-$text--light:     $gray;
+// Semantic colors
+$text:              $gray--dark;
+$text--dark:        $black;
+$text--highlight:   $green;
+$text--light:       $gray;
 
-$border--light:   $gray--light;
+$border--ui-el:     $gray;
+$border--light:     $gray--light;
 
-// Font stacks
+$background-light:  $gray--lighter;
+
+
+
+// FONT STACKS
 $opensans: 'Open Sans', Helvetica, Arial, sans-serif;
 $encodesans: 'Encode Sans Expanded', sans-serif;
+
+
+
 
 // Mobile breakpoints
 @mixin smartphone {

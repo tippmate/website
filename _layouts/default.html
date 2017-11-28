@@ -44,9 +44,22 @@
       <div class="mobile-nav__container">
         {% assign routes = site.t[page.lang].routes.main %}
         {% for route in routes %}
+          {% assign subs = route[1].sub %}
           <a class="mobile-nav__item" href="{{ route[1].url }}">
             {{ route[1].name }}
           </a>
+          {% if subs.size > 0 %}
+            <div class="mobile-nav__sub">
+              <button class="mobile-nav__sub-toggle"></button>
+              <div class="mobile-nav__sub-items" style="display: none">
+                {% for sub in subs %}
+                  <a class="mobile-nav__sub-item" href="{{ sub.url }}">
+                    {{ sub.name }}
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -72,12 +85,22 @@
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-        </footer>
+    <footer class="footer">
+      <div class="footer-container page-container">
+        <div class="footer-nav">
+          {% assign routes = site.t[page.lang].routes.main %}
+          {% for route in routes %}
+            <a class="footer-nav__item" href="{{ route[1].url }}">
+              {{ route[1].name }}
+            </a>
+          {% endfor %}
+        </div><div class="footer-contact">
+          Kontaktdaten
+        </div><div class="footer-sub">f
+          <a href="#">Impressum</a> • <a href="#">AGB</a> • © 2017 Tippmate GbR. All rights reserved
+        </div>
       </div>
-    </div>
+    </footer>
     
     <script type="text/javascript" src="{{ site.baseurl }}/javascript/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/javascript/main.js"></script>
