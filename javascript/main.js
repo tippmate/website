@@ -44,6 +44,21 @@ Tippmate.page = function() {
     }
   };
   
+  var header_shadow = false;
+  var headerPos = function() {
+    var top_pos = window.pageYOffset;
+    if (top_pos > 20 && header_shadow == false) {
+      $('.header').addClass('header--shadow');
+      header_shadow = true;
+    } else if (top_pos <= 20 && header_shadow == true) {
+      $('.header').removeClass('header--shadow');
+      header_shadow = false;
+    }
+    // p_bg0.style.transform = 'translate(0, '+(-top_pos)+'px)';
+    window.requestAnimationFrame(headerPos);
+  };
+  headerPos();
+  
   
   // showMobileNav($('.mobile-nav-toggle__show')[0]);
 };

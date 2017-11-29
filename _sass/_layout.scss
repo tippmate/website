@@ -16,6 +16,8 @@ body {
 
 
 .header {
+  transition-duration: $transition-duration;
+  transition-property: box-shadow;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,6 +25,9 @@ body {
   z-index: 100;
   background: #FFF;
   height: $header--height;
+  &.header--shadow {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
 }
 
 .header-logo {
@@ -33,10 +38,14 @@ body {
   background-size: contain;
   height: $header--height;
   width: $header--height/0.7;
+  @include tablet {
+    float: left;
+  }
 }
 
 .nav {
   display: none;
+  float: right;
   @include tablet {
     display: block;
   }
@@ -45,6 +54,9 @@ body {
 .nav__item {
   font-family: $encodesans;
   color: $text--light;
+  display: inline-block;
+  margin-left: calc(10vw - 40px);
+  line-height: $header--height;
 }
 
 .mobile-nav {
@@ -207,6 +219,12 @@ body {
 }
 //}
 
+
+
+.page-container {
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+}
 
 
 //
