@@ -40,7 +40,7 @@
       </div>
     </div>
     
-    <div class="mobile-nav" style="display: none">
+    <div class="mobile-nav" style="display: none;">
       <div class="mobile-nav__container">
         {% assign routes = site.t[page.lang].routes.main %}
         {% for route in routes %}
@@ -50,7 +50,7 @@
           </a>
           {% if subs.size > 0 %}
             <div class="mobile-nav__sub">
-              <button class="mobile-nav__sub-toggle"></button>
+              <button class="mobile-nav__sub-toggle"><div></div></button>
               <div class="mobile-nav__sub-items" style="display: none">
                 {% for sub in subs %}
                   <a class="mobile-nav__sub-item" href="{{ sub.url }}">

@@ -38,18 +38,12 @@ Tippmate.page = function() {
   showMobileSubNav = function(trigger) {
     var last = $('.mobile-nav__sub-toggle--expanded');
     last.removeClass('mobile-nav__sub-toggle--expanded').next().slideUp();
-    console.log(last[0]);
-    console.log($(trigger)[0]);
     if ($(trigger)[0] != last[0]) {
       $(trigger).addClass('mobile-nav__sub-toggle--expanded');
-      // if ($(trigger).hasClass('mobile-nav__sub-toggle--expanded')) {
         $(trigger).next().slideDown();
-      // } else {
-      //   $(trigger).next().slideUp();
-      // }
     }
   };
   
   
-  showMobileNav($('.mobile-nav-toggle__show')[0]);
+  // showMobileNav($('.mobile-nav-toggle__show')[0]);
 };
