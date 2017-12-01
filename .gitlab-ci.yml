@@ -6,14 +6,15 @@ build:
   script:
     - bundle install
     - jekyll build
-  artifacts:     
-    paths:       
+  artifacts:
+    paths:
       - _site
 
 deploy to production:
   environment: production
-  image: ruby:latest
+  image: python:latest
   script:
-  - echo deploy to $S3_BUCKET_NAME
+  - pip install awscli
+  - aws s3 cp ./_site s3://$S3_BUCKET_NAME/ --recursive
   only:
   - master
