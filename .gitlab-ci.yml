@@ -22,7 +22,7 @@ deploy:
   image: python:latest
   script:
     - ls -a
-  # - pip install awscli
-  # - aws s3 cp ./_site s3://$S3_BUCKET_NAME/ --recursive
-  # only:
-  # - master
+    - pip install awscli
+    - aws s3 cp ./_site s3://$S3_BUCKET_NAME/ --recursive
+    # only:
+    # - master
