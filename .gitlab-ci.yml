@@ -1,0 +1,19 @@
+variables:
+  S3_BUCKET_NAME: "www.tippmate.de"
+
+build:
+  image: ruby:latest
+  script:
+    - bundle install
+    - jekyll build
+  artifacts:     
+    paths:       
+      - _site
+
+deploy to production:
+  environment: production
+  image: ruby:latest
+  script:
+  - echo deploy to $S3_BUCKET_NAME
+  only:
+  - master
