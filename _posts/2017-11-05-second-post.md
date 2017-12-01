@@ -12,4 +12,6 @@ Maybe some image?
 
 Now?
 
+Auto deploy?
+
 ![](/images/404.jpg)
