@@ -1,6 +1,11 @@
 variables:
   S3_BUCKET_NAME: "www.tippmate.de"
 
+stages:
+  - build
+  - deploy_production
+
+
 build:
   image: ruby:latest
   script:
@@ -10,7 +15,7 @@ build:
     paths:
       - _site
 
-deploy to production:
+deploy_production:
   environment: production
   image: python:latest
   script:
