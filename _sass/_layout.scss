@@ -8,6 +8,7 @@ html {
 
 body {
   background: #FFF;
+  line-height: 1.4;
 }
 
 //
@@ -52,11 +53,34 @@ body {
 }
 
 .nav__item {
-  font-family: $encodesans;
-  color: $text--light;
   display: inline-block;
   margin-left: calc(10vw - 40px);
+  position: relative;
+}
+
+.nav__item-link {
+  font-family: $encodesans;
+  color: $text--light;
   line-height: $header--height;
+  display: inline-block;
+}
+
+.nav__sub {
+  position: absolute;
+  left: 50%;
+  top: $header--height;
+  border: 1px solid #EEE;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background: #fff;
+  min-width: 180px;
+  margin-left: -90px;
+}
+
+.nav__sub-item {
+  display: block;
+  padding: 0.5em 0.7em;
+  border-bottom: 1px solid #eee;
+  text-align: center;
 }
 
 .mobile-nav {
@@ -237,8 +261,15 @@ body {
 
 .footer-nav, .footer-contact {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   vertical-align: top;
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.footer-nav {
+  column-count: 2;
 }
 
 .footer-nav__item {

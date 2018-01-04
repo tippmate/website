@@ -25,9 +25,21 @@
         <div class="nav">
           {% assign routes = site.t[page.lang].routes.main %}
           {% for route in routes %}
-            <a class="nav__item" href="{{ route[1].url }}">
-              {{ route[1].name }}
-            </a>
+            {% assign subs = route[1].sub %}
+            <div class="nav__item">
+              <a class="nav__item-link" href="{{ route[1].url }}">
+                {{ route[1].name }}
+              </a>
+              {% if subs.size > 0 %}
+                <div class="nav__sub" style="display: none">
+                  {% for sub in subs %}
+                    <a class="nav__sub-item" href="{{ sub.url }}">
+                      {{ sub.name }}
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
           {% endfor %}
         </div>
         <div class="mobile-nav-toggle">
@@ -64,39 +76,45 @@
       </div>
     </div>
     
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
-    <div id="main" role="main" class="container">
+    <!-- <div class="page-container">
+      <div class="site-info">
+        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+        <p class="site-description">{{ site.description }}</p>
+      </div> -->
+      
       {{ content }}
-    </div>
+    <!-- </div> -->
+
+
 
     <footer class="footer">
       <div class="footer-container page-container">
-        <div class="footer-nav">
+        <div class="footer-contact">
+          <div class="footer-contact__headline">Kontakt</div>
+          <a href="mailto:info@tippmate.de"><i class="icon icon--email"></i>info@tippmate.de</a>
+          <a href="http://facebook.com/tippmate"><i class="icon icon--facebook"></i>facebook.com/tippmate</a>
+          <address>
+            Tippmate GbR<br>
+            Gabelsbergerstraße 6<br>
+            83308 Trostberg<br>
+            Telefon: <a href="tel:+4986219709771">+49 (0) 8621 9709771</a>
+          </address>
+        </div><div class="footer-nav">
           {% assign routes = site.t[page.lang].routes.main %}
           {% for route in routes %}
+            {% assign subs = route[1].sub %}
             <a class="footer-nav__item" href="{{ route[1].url }}">
               {{ route[1].name }}
             </a>
+            {% if subs.size > 0 %}
+              {% for sub in subs %}
+                <a class="footer-nav__item" href="{{ sub.url }}">
+                  {{ sub.name }}
+                </a>
+              {% endfor %}
+            {% endif %}
           {% endfor %}
-        </div><div class="footer-contact">
-          Kontaktdaten
-        </div><div class="footer-sub">f
+        </div><div class="footer-sub">
           <a href="#">Impressum</a> • <a href="#">AGB</a> • © 2017 Tippmate GbR. All rights reserved
         </div>
       </div>

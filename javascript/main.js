@@ -8,6 +8,41 @@ Tippmate.page = function() {
   
   
   
+  $nav__subs = $('.nav__sub');
+  
+  $('.nav__sub').each(function(e) {
+    var $nav__sub = $(this);
+    var timeout;
+    var $nav__trigger = $nav__sub.prev('.nav__item-link');
+    $nav__trigger.on({
+      'mouseover': function() {
+        clearTimeout(timeout);
+        $nav__subs.hide();
+        $nav__sub.fadeIn(transition_duration);
+      },
+      'mouseout': function() {
+        timeout = setTimeout(function() {
+          $nav__sub.fadeOut();
+        }, 400);
+      }
+    });
+    
+    $nav__sub.on({
+      'mouseover': function() {
+        clearTimeout(timeout);
+      },
+      'mouseout': function() {
+        timeout = setTimeout(function() {
+          $nav__sub.fadeOut();
+        }, 400)
+      }
+    })
+    
+    // $nav__trigger.on('mouse')
+  });
+  
+  
+  
   
   $('.mobile-nav-toggle__show').click(function(e) {
     showMobileNav(this);
