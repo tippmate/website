@@ -3,11 +3,24 @@
 /**************/
 
 html {
-  font-size: 62.5%;
+  font-size: 75%; //12px
+  min-width: 360px;
+  @include media-breakpoint-up(sm) {
+    font-size: 81.25%; //13px
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 93.75%; //15px
+  }
 }
 
 body {
-  font: 1.6rem/1.4 $opensans;
+  font: 1rem/1.4 $opensans;
+//  @include media-breakpoint-up(sm) {
+//    font-size: 1.3rem;
+//  }
+//  @include media-breakpoint-up(md) {
+//    font-size: 1.5rem;
+//  }
   color: $text;
   padding-top: $header--height;
 }
@@ -16,14 +29,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $encodesans;
   color: $text--dark;
   line-height: 1.7;
-  @include smartphone {
+  @include media-breakpoint-up(sm) {
     
   }
 }
 
 h1 {
-  font-size: 3.2rem;
-  line-height: 4.6rem;
+  font-size: 2rem;
+  line-height: 1.4em;
+  margin-bottom: 1em;
+  @include media-breakpoint-up(sm) {
+//    font-size: 2.8rem;
+//    line-height: 4.6rem;
+  }
+  @include media-breakpoint-up(md) {
+//    font-size: 3.2rem;
+//    line-height: 4.6rem;
+  }
   a {
     color: inherit;
   }
@@ -131,4 +153,15 @@ button {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.btn {
+  border-color: #FFF;
+  text-transform: uppercase;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #FFF !important;
+  };
+  
 }

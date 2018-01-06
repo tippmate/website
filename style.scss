@@ -7,9 +7,14 @@
 
 //@import "reset";
 @import "vendor/bourbon/bourbon";
-@import "vendor/normalize";
-@import "vendor/skeleton";
+//@import "vendor/normalize";
 @import "variables";
+@import "variables-bootstrap";
+@import "vendor/bootstrap/bootstrap-reboot";
+@import "vendor/bootstrap/bootstrap-grid";
+@import "vendor/bootstrap/utilities/display";
+@import "vendor/bootstrap/utilities/spacing";
+@import "vendor/bootstrap/buttons";
 @import "base_rules";
 @import "layout";
 @import "modules";
