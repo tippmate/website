@@ -96,4 +96,12 @@ Tippmate.page = function() {
   
   
   // showMobileNav($('.mobile-nav-toggle__show')[0]);
+  
+  
+  
+  
+  
+  $(".glide").glide({
+    type: "carousel"
+  });
 };

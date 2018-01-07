@@ -1,0 +1,1 @@
+<svg class="lnr lnr-{{ include.type }}"><use xlink:href="#lnr-{{ include.type }}"></use></svg>

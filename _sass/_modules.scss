@@ -38,23 +38,27 @@
     top: 0;
     bottom: 0;
     @extend .bg-radial-gradient;
-    opacity: .9;
+    @include media-breakpoint-up(sm) {
+      opacity: .9;
+    }
   }
+}
+
+.light-bg-section {
+  background: #EAEAEA;
+  background-image: linear-gradient(0deg, #EDEDED 0%, #F7F7F7 100%);
+  padding: $section-margin;
 }
 
 
 .home-top {
-  margin-bottom: 40px;
+  margin-bottom: $section-margin * 1.3;
   position: relative;
   @include media-breakpoint-up(sm) {
     background-image: url(/images/bg-eckfahne-fussballplatz--600.jpg);
   }
   @include laptop {
     background-image: url(/images/bg-eckfahne-fussballplatz.jpg);
-  }
-  margin-top: 20px;
-  h1 {
-    margin-top: -10px;
   }
 }
 
@@ -75,4 +79,69 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     transform: translate(-50%, -50%);
   }
+}
+
+
+.home-advantages {
+  .lnr {
+    width: 3em;
+    height: 3em;
+    color: $icon--light;
+    margin-right: 1em;
+  }
+}
+
+
+
+.list {
+  list-style-type: circle;
+}
+
+.list__item {
+  margin: 1em 0;
+}
+
+.list--checks {
+  list-style: none;
+  padding-left: 2.2em;
+  .list__item {
+    position: relative;
+    &:before {
+      position: absolute;
+      left: -2.2em;
+      top: .25em;
+      content: '';
+      display: block;
+      width: 1em;
+      height: .55em;
+      border-bottom: 1px solid $icon--highlight;
+      border-left: 1px solid $icon--highlight;
+      transform: rotate(-45deg);
+    };
+  }
+}
+
+
+.iconic-features {
+  
+}
+
+.iconic-feature {
+  text-align: center;
+  .lnr {
+    font-size: 2em;
+    color: $icon--highlight;
+  }
+  h3 {
+    margin-top: $spacer-2;
+    margin-bottom: $spacer-1;
+  }
+  h4 {
+    margin-bottom: $spacer-2;
+  }
+}
+
+
+.more-col {
+   
 }

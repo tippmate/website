@@ -9,11 +9,12 @@
 
 $blue: #4183C4;
 $green: #96C243;
-
+$green--dark: #8ABC31;
+$turquoise: #136F63;
 // Grays
 $black:             #000;
 $gray:              #858585;
-$gray--dark:        #333;
+$gray--dark:        #616161;
 $gray--light:       #E6E6E6;
 $gray--lighter:     #EEE;
 
@@ -23,10 +24,15 @@ $text--dark:        $black;
 $text--highlight:   $green;
 $text--light:       $gray;
 
+$h-color:           $turquoise;
+
 $border--ui-el:     $gray;
 $border--light:     $gray--light;
 
 $background-light:  $gray--lighter;
+
+$icon--highlight: $green--dark;
+$icon--light:     #DFDFDF;
 
 
 
@@ -69,3 +75,17 @@ $transition-duration: .3s;
 $header--height: 60px;
 $mobile-nav-item-height: 15vh;
 $page-padding: 20px;
+
+$section-margin: 4.2rem;
+
+
+
+// Spacer
+$spacer: 1rem;
+$spacer-1:  $spacer * .5;
+$spacer-2:  $spacer;
+$spacer-3:  ($spacer * 1.5);
+$spacer-4:  ($spacer * 2);
+$spacer-5:  ($spacer * 3);
+$spacer-6:  ($spacer * 4.2);
+$spacer-7:  ($spacer * 5.6);
