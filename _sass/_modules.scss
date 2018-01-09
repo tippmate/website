@@ -145,3 +145,31 @@
 .more-col {
    
 }
+
+.happy-clients {
+  .glide__slide {
+  }
+  
+}
+
+.happy-client {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.happy-client__portrait {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto;
+}
+.happy-client__content {
+}
+
+.glide {
+  .glide__arrows {
+    
+  }
+}

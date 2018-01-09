@@ -12,8 +12,8 @@
         <div class="glide">
 
             <div class="glide__arrows">
-                <button class="glide__arrow prev" data-glide-dir="<">prev</button>
-                <button class="glide__arrow next" data-glide-dir=">">next</button>
+                <button class="glide__arrow prev" data-glide-dir="<">{% include icon type="chevron-left" %}</button>
+                <button class="glide__arrow next" data-glide-dir=">">{% include icon type="chevron-right" %}</button>
             </div>
 
             <div class="glide__wrapper">
@@ -21,7 +21,7 @@
                     <li class="glide__slide">
                       <div class="happy-client">
                         <div class="happy-client__portrait">
-                          <img src="" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
+                          <img src="/images/naomi-owusu-tickaroo-ceo.jpg" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
                         </div>
                         <div class="happy-client__content">
                           <blockquote class="happy-client__quote">
@@ -36,7 +36,7 @@
                     <li class="glide__slide">
                       <div class="happy-client">
                         <div class="happy-client__portrait">
-                          <img src="" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
+                          <img src="/images/naomi-owusu-tickaroo-ceo.jpg" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
                         </div>
                         <div class="happy-client__content">
                           <blockquote class="happy-client__quote">
@@ -51,7 +51,7 @@
                     <li class="glide__slide">
                       <div class="happy-client">
                         <div class="happy-client__portrait">
-                          <img src="" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
+                          <img src="/images/naomi-owusu-tickaroo-ceo.jpg" class="happy-client__img" alt="Portrait von Naomi Owusu, Geschäftsführerin Tickaroo GmbH" title="Geschäftsführerin Tickaroo GmbH">
                         </div>
                         <div class="happy-client__content">
                           <blockquote class="happy-client__quote">
@@ -73,8 +73,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="twelve columns">
-        <a href="#" class="btn btn-default"><i></i> Referenzen</a>
+      <div class="col more-col text-center">
+        <a href="#" class="btn btn-link">{% include icon type="arrow-right" %}Referenzen</a>
       </div>
     </div>
   
