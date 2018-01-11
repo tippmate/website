@@ -8,7 +8,6 @@ html {
 
 body {
   background: #FFF;
-  line-height: 1.4;
 }
 
 //
@@ -31,6 +30,16 @@ body {
   }
 }
 
+.header__container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.header__row {
+  @include make-row();
+  justify-content: space-between;
+}
+
 .header-logo {
   display: block;
   margin: 0 auto;
@@ -41,6 +50,7 @@ body {
   width: $header--height/0.7;
   @include media-breakpoint-up(md) {
     float: left;
+    margin: 0;
   }
 }
 
@@ -54,7 +64,7 @@ body {
 
 .nav__item {
   display: inline-block;
-  margin-left: calc(10vw - 40px);
+  margin-left: calc(1vw + 20px);
   position: relative;
 }
 
@@ -242,14 +252,7 @@ body {
     transform: rotate(45deg);
   }
 }
-//}
 
-
-
-.page-container {
-  padding-left: $page-padding;
-  padding-right: $page-padding;
-}
 
 
 //
@@ -257,28 +260,21 @@ body {
 //
 
 .footer {
-  background: #E3E3E3;
+  background: #F5F5F5;
 }
 
-.footer-nav, .footer-contact {
-  display: inline-block;
-  width: 100%;
-  vertical-align: top;
-  @include media-breakpoint-up(md) {
-    width: 50%;
-  }
+.footer__container {
+  @include make-container();
+  @include make-container-max-widths(); 
 }
 
-.footer-nav {
-  column-count: 2;
-}
-
-.footer-nav__item {
-  display: block;
-}
-
-.footer-sub {
+.footer__row {
+  color: #A5A5A5;
   width: 100%;
   text-align: center;
   display: inline-block;
+  padding: $spacer-6 0;
+  a {
+    color: inherit;
+  }
 }

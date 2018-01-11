@@ -7,11 +7,11 @@
 
 //@import "reset";
 @import "../node_modules/bourbon/core/_bourbon";
-@import "../node_modules/glidejs/src/sass/glide.core";
-//@import "../node_modules/glidejs/src/sass/glide.theme";
+
 ////@import "vendor/normalize";
 @import "variables";
 @import "variables-bootstrap";
+@import "owl.custom";
 //@import "../node_modules/bootstrap/scss/bootstrap-reboot";
 //@import "../node_modules/bootstrap/scss/bootstrap-grid";
 //@import "../node_modules/bootstrap/scss/utilities/display";
@@ -22,7 +22,6 @@
 @import "vendor/bootstrap/utilities/display";
 @import "vendor/bootstrap/utilities/spacing";
 @import "vendor/bootstrap/buttons";
-@import "glide.custom.theme";
 @import "base_rules";
 @import "layout";
 @import "modules";

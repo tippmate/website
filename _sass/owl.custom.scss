@@ -1,0 +1,51 @@
+@import "../components/OwlCarousel2-2.2.1/src/scss/core";
+@import "../components/OwlCarousel2-2.2.1/src/scss/animate";
+@import "../components/OwlCarousel2-2.2.1/src/scss/autoheight";
+@import "../components/OwlCarousel2-2.2.1/src/scss/lazyload";
+//@import "../components/OwlCarousel2-2.2.1/scss/video";
+
+/*
+ * 	Green theme - Owl Carousel CSS File
+ */
+
+$color-base:			$green;
+$color-white:			#FFF !default;
+$color-gray:			$border--light;
+
+//nav
+
+$nav-color: 			$green;
+$nav-color-hover:	$green--dark;
+$nav-font-size: 	2rem;
+$nav-rounded: 		0;
+$nav-margin: 			0px;
+$nav-padding: 		0px;
+$nav-background: 	transparent;
+$nav-background-hover:	transparent;
+$nav-disabled-opacity: 	0.5;
+
+//dots
+
+$dot-width:				4px;
+$dot-height:			4px;
+$dot-rounded:			100px;
+$dot-margin: 			5px 7px !default;
+$dot-background:	$color-gray !default;
+$dot-background-active:	$color-base !default;
+
+.owl-theme .owl-item {
+  padding: 0 4rem;
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+  position: absolute;
+  top: 20%;
+}
+.owl-theme .owl-nav .owl-next {
+  right: 0;
+}
+.owl-theme .owl-nav .owl-prev {
+  left: 0;
+}
+
+@import "../components/OwlCarousel2-2.2.1/src/scss/theme";

@@ -11,6 +11,9 @@
       -webkit-box-decoration-break: clone;
     }
   }
+  h3 {
+    color: #FFF;
+  }
 }
 
 .bg-radial-gradient {
@@ -48,6 +51,12 @@
   background: #EAEAEA;
   background-image: linear-gradient(0deg, #EDEDED 0%, #F7F7F7 100%);
   padding: $section-margin;
+}
+
+.portrait {
+  border: 2px solid #DDDDDD;
+  padding: 2px;
+  border-radius: 500px;
 }
 
 
@@ -138,6 +147,7 @@
   }
   h4 {
     margin-bottom: $spacer-2;
+    color: $gray--dark;
   }
 }
 
@@ -147,9 +157,13 @@
 }
 
 .happy-clients {
-  .glide__slide {
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    text-align: left;
   }
-  
+  h2 {
+    margin-bottom: $spacer-4;
+  }
 }
 
 .happy-client {
@@ -159,17 +173,72 @@
   }
 }
 .happy-client__portrait {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  width: auto;
+  align-self: center;
+  width: 70px;
+  margin: 0 auto $spacer-3;
+  @include media-breakpoint-up(sm) {
+    margin: 0 $spacer-4 0 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto;
+  }
 }
-.happy-client__content {
+.happy-client__img {
+  @extend .portrait
+}
+.happy-client__quote {
+  font-style: italic;
 }
 
-.glide {
-  .glide__arrows {
-    
+
+hr {
+  margin-top: $spacer-4;
+  margin-bottom: $spacer-4;
+  border: 0;
+  height: $hr-border-width;
+  background: $hr-border-color;
+}
+
+.hr--on-dark {
+  opacity: 0.12;
+  background-image: linear-gradient(-90deg, rgba(0,0,0,0.00) 0%, #000000 50%, rgba(0,0,0,0.00) 100%);
+  width: 70%;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vcard {
+  display: flex;
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.vcard__img {
+  @extend .portrait;
+  align-self: center;
+  margin-right: $spacer-3;
+}
+
+.vcard__contact-list {
+  margin-top: $spacer-2;
+}
+
+.vcard__contact {
+  margin-top: $spacer-1;
+  display: block;
+  .lnr {
+    display: inline-block;
+    margin-right: .5em;
+  }
+}
+
+.further-questions {
+  .vcard {
+    justify-content: center;
+    margin: $spacer-4 0;
   }
 }

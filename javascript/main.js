@@ -98,10 +98,15 @@ Tippmate.page = function() {
   // showMobileNav($('.mobile-nav-toggle__show')[0]);
   
   
-  
-  
-  
-  $(".glide").glide({
-    type: "carousel"
+  $(".owl-carousel").owlCarousel({
+    animateOut: 'fadeOut',
+    items: 1,
+    nav: true,
+    dots: true,
+    navText: [
+      '<svg class="lnr lnr-chevron-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lnr-chevron-left"></use></svg>',
+      '<svg class="lnr lnr-chevron-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lnr-chevron-right"></use></svg>'
+    ]
   });
+  
 };
