@@ -60,10 +60,10 @@ t:
       main:
         home:
           name: Home
-          url: /
+          url: /de/
         product:
           name: Produkt
-          url: /produkt
+          url: /de/produkt
           sub:
             - name: Test 1
               url: /test-1
@@ -81,4 +81,4 @@ t:
               url: /menu-2
         contact:
           name: Kontakt
-          url: /contact
+          url: /de/kontakt

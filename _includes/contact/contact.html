@@ -1,0 +1,55 @@
+<section class="contact section light-bg-section my-0">
+  
+  <div class="container">
+    
+    <div class="row">
+      <div class="col text-center">
+        <h1>Kontakt</h1>
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-12 col-md-6">
+        <p>Weitere Fragen zu unserem Produkt?</p>
+        <p>Kontaktieren Sie uns persönlich, <br>wir helfen Ihnen gerne weiter:</p>
+        
+        <div class="my-5">
+          {% include vcards/max-rieder.html %}
+        </div>
+        
+        <h5>Finden Sie uns auf:</h5>
+        <a class="sml" href="#"><img class="smi smi-facebook" src="/images/smi-facebook.svg"/>facebook.com/tippmate</a><br>
+        <a class="sml" href="#"><img class="smi smi-twitter" src="/images/smi-twitter.svg"/>twitter.com/tippmate</a>
+      </div>
+      
+      <div class="col-xs-12 col-md-6">
+        <h4 class="d-block d-md-none mt-5 mb-3">Kontaktformular</h4>
+        <form>
+          <div class="form-group">
+            <label for="contact__name-input">Name</label>
+            <input type="text" class="form-control" id="contact__name-input" placeholder="Ihr Name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact__email-input">Email</label>
+            <input type="email" class="form-control" id="contact__email-input" placeholder="Ihre Email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact__phone-input">Telefon</label>
+            <input type="tel" class="form-control" id="contact__phone-input" placeholder="Ihre Telefonnummer">
+          </div>
+          <div class="form-group">
+            <label for="contact__phone-company">Firma</label>
+            <input type="text" class="form-control" id="contact__phone-company" placeholder="Ihre Firma">
+          </div>
+          <div class="form-group">
+            <label for="contact__phone-message">Nachricht</label>
+            <textarea class="form-control" id="contact__phone-message" rows="7"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success btn-bordered">{% include icon type="arrow-right-circle" %}Absenden</button>
+        </form>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>

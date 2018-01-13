@@ -1,6 +1,37 @@
+.noise-overlay {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/images/noise.png);
+  };
+}
+
+.bg-radial-gradient {
+  background: #5D9200;
+  background-image: radial-gradient(farthest-corner at 50% 0, #8ABC31 0, #5D9200 65%, #436800 100%);
+  
+//      background: -webkit-radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
+//      background: -o-radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
+//      background: radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
+}
+
+
 .bg-section,
 .bg-img-section {
   color: #FFF;
+  @extend .noise-overlay;
+  &:after {
+    opacity: 0.7;
+  };
+  .container {
+    position: relative;
+    z-index: 2;
+  }
   
   h1 {
     color: #FFF;
@@ -16,14 +47,6 @@
   }
 }
 
-.bg-radial-gradient {
-  background: #5D9200;
-  background-image: radial-gradient(farthest-corner at 50% 0, #8ABC31 0, #5D9200 65%, #436800 100%);
-  
-//      background: -webkit-radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
-//      background: -o-radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
-//      background: radial-gradient(circle farthest-corner at 50% 60px,#fdf5d0 0,#fcd8ac 90%,#f8c8a5 100%);
-}
 
 .bg-section{
   @extend .bg-radial-gradient;
@@ -51,6 +74,14 @@
   background: #EAEAEA;
   background-image: linear-gradient(0deg, #EDEDED 0%, #F7F7F7 100%);
   padding: $section-margin;
+  @extend .noise-overlay;
+  &:after {
+    opacity: 0.4;
+  };
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .portrait {
@@ -147,7 +178,7 @@
   }
   h4 {
     margin-bottom: $spacer-2;
-    color: $gray--dark;
+    color: $gray--dark; 
   }
 }
 
@@ -240,5 +271,31 @@ hr {
   .vcard {
     justify-content: center;
     margin: $spacer-4 0;
+  }
+}
+
+
+.form-group {
+  label {
+    font-family: $encodesans;
+  }
+  .form-control {
+    border-width: 1px;
+  }
+}
+
+.contact {
+  .smi {
+    margin-right: .5em;
+    width: 32px;
+  }
+  
+  .sml {
+    display: inline-block;
+    margin-bottom: $spacer-1;
+    color: $text;
+    &:hover {
+      color: $text--highlight;
+    };
   }
 }
