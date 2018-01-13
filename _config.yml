@@ -82,3 +82,9 @@ t:
         contact:
           name: Kontakt
           url: /de/kontakt
+      imprint:
+        name: Impressum
+        url: /de/impressum
+      legal:
+        name: AGB
+        url: /de/allgemeine-geschaeftsbedingungen
