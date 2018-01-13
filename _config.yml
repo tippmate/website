@@ -63,7 +63,17 @@ t:
           url: /de/
         product:
           name: Produkt
-          url: /de/produkt
+          url: /de/produkt.html
+          sub:
+            - name: Test 1
+              url: /test-1
+            - name: Test 2
+              url: /test-2
+            - name: Test 3
+              url: /test-3
+        pices:
+          name: Preise
+          url: /de/peise.html
           sub:
             - name: Test 1
               url: /test-1
@@ -73,7 +83,7 @@ t:
               url: /test-3
         references:
           name: Referenzen
-          url: /referenzen
+          url: /de/referenzen.html
           sub:
             - name: Menu 1
               url: /menu-1
@@ -81,10 +91,10 @@ t:
               url: /menu-2
         contact:
           name: Kontakt
-          url: /de/kontakt
+          url: /de/kontakt.html
       imprint:
         name: Impressum
-        url: /de/impressum
+        url: /de/impressum.html
       legal:
         name: AGB
-        url: /de/allgemeine-geschaeftsbedingungen
+        url: /de/allgemeine-geschaeftsbedingungen.html
